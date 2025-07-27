@@ -31,6 +31,15 @@ git branch (to check branch):-
 git branch -M main (to rename branch)
 git push origin main.
 
+11)git diff
+viewing differences
+it is used to  show the diferences between the working directory and the staging area.
+
+it is useful for code reviews and debugging by checking the differences before committing changes.
+syntax:- git diff
+ or
+ git diff commit1 commit2
+
 What does Git do?
 Manage projects with Repositories
 Clone a project to work on a local copy
