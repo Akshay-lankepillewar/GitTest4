@@ -1,0 +1,856 @@
+Constructors used in java:-
+1)it is usefull to intalize the instance variable.
+2)it is resposiable to provide space in memory to all non-static properties of the class.
+3) it is responsiable to instantiate(creation of object). 
+
+Grabage collections :-
+
+Garbage collector help us to manage memory in java efficiently and effectively by regularly removing unused object from the memory and thus avoiding memory overflow.
+
+
+Non Static :-
+non static variable are created outside method and inside class without static keyword.
+only after creating object we can access non static variable.
+in the below program variable is access without creating object and hence be get error.
+
+public class MyClass {
+    int x=10;
+    public static void main(String args[]) 
+	{
+      System.out.println(x);
+    }
+}
+
+this the write program using inside the object.
+public class MyClass {
+    int x=10;
+    public static void main(String args[]) {
+      MyClass m=new MyClass();
+      
+      System.out.println(m.x);
+    }
+}
+
+static varable:- 
+static variable are created in inside the class and out side the method using the static keyword
+static keyword  are not create the object.
+static variable are directly call the class.
+
+public class A{
+static int x=10;
+public static void main (String args[]){
+System.out.prinltn(A.x);
+}
+}
+ 
+ 
+static variable value can be change  in below program.
+ 
+public class A {
+ static int x=10;
+ public static void main(String arg[]){
+	 System.out.println(A.x);
+	 A.x=100;
+	 System.out.println(A.x);
+	 System.out.println(A.x);
+ }
+ 
+ }
+
+
+Methods :-
+method is redues the code within the bonderies.
+mehtods is the set of code.run the code within bounderies.
+method are always return the void.
+
+
+STACK & HEAP MEMORY
+program execution glow is maintain in stack MEMORY.
+object are created in heap memories.
+
+
+local variable :=
+this variable are created inside method and should be used within created method,
+if out side created method then we will give an error as shown in below example
+
+example:-
+pulbic class A{
+public static void main(String args[]){
+  int id=10;
+  System.out.println(id);
+
+}
+public void test(){
+System.out.prinln(id);
+
+}
+}
+
+
+final Keyword:-
+1)if you make the variable final then it' value can not be change. 
+2)if you make non static/static variable so it is mandatory to initialize the the value.
+3)suppose if we are create the final method so it is not allowed the override this method.
+4) if you make the final class so it is not allowed the inheritence.
+
+
+Q) can we create interface inside without intialize variable so it can be throw the error or not.
+=>interface inside it is manadatory the variable can be initialize the variable value other wise it will be show the error.
+
+continuation of an interfaces:-
+1)Bydefault every variable in an interface is final and static.
+2)Foreign interface you can not be create object. 
+Foreign Interface: Interoperability with native code.
+3)main methodes are allowed in an interface since in verison 8 of java.
+
+java 8 features 
+1) functional interface
+2) lambda expresion
+3) default keyword
+4) stream api
+5) optional class
+
+1)functional interface :- 
+1)functional interface is indrodues java 8 features.
+2)functional interface inside only one incomplete method are allowed.
+3)suppose function interface inside if we are create the zero or more than one incomplete method so it will show the error
+4)function interface inside allowed the override.
+
+2) Lambda expresion:-
+1) lambda expresion is indrodues java 8 features.
+2) lambda expresion is help us to reduces the line of code.
+3) lambda expresion is used of limited for example stream api,functional interface.
+
+3)default keyward :-
+1) the main purpoes of the default keyword is complete the method in an interface.
+2)it is introdues version java 8 features.
+
+Abstract Keyword:-
+
+the main purpose of abstract keyword is if your don't know the implmentation so that time used the abstract keyword.
+abstract is only declaration not a implmentation
+
+1) when we apply abstract keyword on method then it means method is incomplete.
+2) when we apply abstract keyword on class then it means class is incomplete or complete in it.
+3)to develop incomplete methods in abstract class it is mandatory to use abstract keyword.
+4)abstract class can not be create the object.
+5)an abstract class can consist of both non-static & static method in it.
+6)non-static members are accessed via inheritance only.
+
+
+difference between abstract and interface
+1)Abstract class:-1)abstract class can not be allowed the multiple inheritence.2) abstract class can be used the abstract keyward.
+
+3)static and non static and abstract method are allowed.
+
+4)abstract class is 0 to 100% incomplete.
+5)abstract class inside are allowed complete or incomplete method.
+
+1)Interface class:-1) interface class can be allowed the multiple inheritence.2)Interface class can be used the interface keyward.
+3)only final and static variable are allowed.
+4)interface their are 100% incomplete.
+5) interface inside only allowed the incomplete method
+
+------------------------------------------------++++++++++++++++++++++++++++++++++++++-------------------------------------------
+
+
+
+Exception Defination:-
+when bad user input is given program execution will stop abruptly. this is called as exception in java.
+
+Any unwanted or unexpected event which disturbs the normal flow of the program is called the exception.
+
+To handle exception we use try catch block in java.if any line of code in try block throws exception then try block will create exception object will that object address it will give to catch block. catch block will suppress the exception and hence further code will continue to run.
+
+Types of exception :-
+1) Runtime Exception(uncheck exception):- this exception occure when you run .class file.
+
+Arithematic Exception:- when an invalid mathematical operation perform we get arithematic exception like dividing number by 0.to handle this exception we can used g
+public class A{
+publilc static void main(string args[]){
+try{
+int x=10;
+int y=0;
+ System.out.println(z);
+
+}
+catch(ArithematicException a){
+a.printstackTrace();
+}
+system.out.println("welcome");
+}
+}
+
+ex 2)classes.
+EX.
+public static void main(String []args){
+public class A{
+
+try{
+A a1=null;
+system.out.println(a1.x);
+
+}catch(NullPointerException e){
+e.printstackTrace();
+}
+NullPointerException:-if you access non static member with null refrence variable then we get null pointer exception.
+
+2)Compiletime Exception(check exception):-this exception occure when you convert (source code).java file to .class(bytes code) file.
+
+ex. to handle this exception used null pointer exception 
+system.out.println("welcome");
+}
+}
+
+Exception class:- 
+exception class is handle the any kind of exception.where as arithematic exception handle only specific exception in (like dividing by 0).
+
+Number format exception:- when you convert invalid to string to number we number format exception.
+
+Throwable CLASS USED:-
+Throwable class can be handle the generic exceptions.
+
+DIFFRENCE BETWEEN THE SPECIFIC AND GENERIC CLASS:-
+1)SPECIFIC class:- specific class can handle only perticular kind of exception.
+
+
+
+2)Generic class :- exception class handle any kind of exception handle.
+
+---------------------------------------------+++++++++++++++++++++++++++++++++---------------------------------------------------
+Break LOOP:-
+
+1)it can be used only inside loops and switch case
+2) it will exit for loops.
+
+package LOOPS;
+//break loop is used to exit the loop .
+//break is used inside the loop and switch inside .
+public class Break {
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++) {
+			System.out.println(100);
+			break;
+		}
+		
+	}
+	
+
+}
+output :-
+100
+
+ex.
+public class Break {
+public static void main(String[] args) {
+		for(int i=0;i<5;i++) {
+			if(i==3) {//this loop is work on only when i=3 then after break the loop.
+				break;
+				
+			}
+			System.out.println("100");
+		}
+	}
+}
+output:-100
+100
+100	
+
+-------------++++++++++--------------------
+continue loop:-
+continue loop is used to the return go back to the loop.
+
+ex:-
+package LOOPS;
+// continue loop it is used the return go back to loop that time used the continue loop.
+public class Continue_loop {
+public static void main(String[] args) {
+	for(int i=0;i<=5;i++) {
+		if(i==3) {
+			continue;
+			
+			
+		}
+		System.out.println(i);
+	}
+}
+}
+
+output:-
+0
+1
+2
+4
+5
+
+---------------+++-----------------------
+Labeled break keyword in java
+
+1)it can be used only inside loops.
+2)it can be applied on any block inside the loop.
+
+
+FOR EACH LOOP:-
+For Each loop only used in java.
+works only with arrays.
+
+
+------------------------+++++-------------------------------------+++++++++++++++++++----------------------
+
+interview porgram:-
+write a program of factorial
+
+package IMP_Interview_Program;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+
+		int i = 1, fact = 1;
+		int n = 5;
+		for (i = 1; i <= 5; i++) {
+			fact = fact * i;
+		}
+		System.out.println("factorai of 5 is :" + fact);
+	}
+
+}
+
+------+++++----
+
+
+write a program of dublicate arrays program
+
+package IMP_Interview_Program;
+
+public class Dublicate_Array{
+	public static void main(String[] args) {
+		int[] a= {2,4,3,5,2,5,6,7,4,3};
+		for(int i=0;i<a.length;i++) {
+			for(int j=i+1;j<a.length;j++) {
+				if((a[i]==a[j])&&(i!=j)) {
+					System.out.println(a[j]+"");
+				}
+			}
+			
+		}
+	}
+}
+
+
+------------+++++++++------------
+write a program Remove dublicate arrays
+import java.util.Arrays;
+
+public class Remove_Dublicate_Array {
+    public static void main(String[] args) {
+        int[] x = {0, 0, 1, 1, 2, 3, 4, 3, 4, 5, 6};
+        Arrays.stream(x).distinct().forEach(System.out::println);//words.stream() converts the list of words into a Stream<String>.
+//.distinct() filters out duplicate elements from the stream.
+    }
+}
+
+-------+++++++++++++-----------
+Array using sorting order
+package IMP_Interview_Program;
+
+public class Sorting_Array {
+	public static void main(String[] args) {
+		int[] a = {4,3,50,34,64,43,70};
+		for(int i=0;i<a.length-1;i++) {
+			for(int j=i+1;j<a.length-1;j++) {
+				if(a[i]>a[i+1]) {
+					int temp=a[i+1];
+					a[i+1]=a[i];
+					a[i]=temp;
+				}
+			}
+		}
+		for (int z : a) {
+			System.out.println(z);
+			
+		}
+
+}
+}
+
+-------------------+++++++++++++++----------
+Dublicate chracter in given string
+package IMP_Interview;
+
+public class Dublicate_character {
+	
+		public static void main(String[] args) {
+			String str =new String ("javadeveloper");
+			int count=0;
+			char[] ch = str.toCharArray();
+			for(int i=0;i<ch.length;i++) {
+				for(int j=i+1;j<ch.length;j++) {
+					if(ch[i]==ch[j]) {
+						System.out.println("duplicate characters in string re :" +ch[j]);
+							count++;	
+					}
+				}
+			}
+			System.out.println("duplicate character count:" +count);
+			
+		}
+	}
+		
+		
+----------------------------+++++++++--------------
+write a program to check the number is prime of not prime number
+
+package IMP_Interview_Program;
+
+import java.util.Scanner;
+
+public class Prime_Number {
+
+	public static void main(String[] args) {
+		int temp = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=sc.nextInt();
+
+		for (int i = 2; i < n - 1; i++) {
+			if (n % i == 0) {
+				temp = temp + 1;
+
+			}
+		}
+		if (temp == 0) {
+			System.out.println("number is prime");
+		} else {
+			System.out.println("not prime number");
+		}
+	}
+
+}
+
+------------------------------------------ ++++++++++++++++++++-----------------------------------------------
+FILE HANDLING
+1) FILE
+2)FILEREADER
+3)FILEWRITER :- is work with text file only . it is not work with binary.
+4)BUFFEREDREADER:-
+5)BUFFERWRITER:-1) it improves file writing performance
+2)it has new line method.
+
+1)FileOutStream:- it is work with binary.for example this are used pdf,xml etc.
+
+suppsoe you want delete file  so using the delete method.	
+1)EX:File f1=new File("C://testing_perpose//A.txt");
+			boolean val=f1.delete();
+			System.out.println(val);
+2) suppose suppsoe you want create new file  so using the createNewFile method.	
+EX:File f1=new File("C://testing_perpose//A.txt");
+			boolean val=f1.createNewFile();
+			System.out.println(val);
+3)suppsoe if you want to file inside total character so using the length method.
+EX:File f1=new File("C://testing_perpose//A.txt");
+			long val=f1.createNewFile();
+			System.out.println(val);
+
+4) if you want create folter so that time using mkdir this mehtods
+EX:File f1=new File("C://testing_perpose//A.txt");
+			long val=f1.mkdir();
+			System.out.println(val);
+
+
+what is flush method:- small bug are find out the flush.
+used to flush the content of the buffer to the output stream.
+
+
+Serialization or Deserialization
+Serialization :- serialization is a process of store converting the object of 0 and 1 and storing in the file systems.
+Deserialization :- is process of reading the file content and forming the object back.
+
+---------------------------------------+++++++++++++++++++++++++++++++++-------------------------------------++++++
+can we used the multiple Catch block.
+yes but
+To create multi catch block you have to start with child exception class names followed. by exception class name as shown below or else you will error.			
+	
+	try {
+			Integer.parseInt("djhui");
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(2);
+		}catch (NullPointerException e) {
+			// TODO: handle exception
+			System.out.println(3);
+		}
+		catch (ArithematicException e) {
+			System.out.println(4);
+		}
+
+Finally block:-
+finally block will run 100% regardless of whether exception occure or not.
+2)it is extension of try catch block.
+
+
+------------------++++++++++++++++++++-------------------------------------------
+differenc between request.setattribute and session variable.
+request.setAttribute sets data for one request only. Session variables persist data across multiple requests during a user's session.
+
+
+what is the JSP TAG:-
+jsp we can write a partial java code.
+
+Interview Quations 
+what are the implicit object in scriplet tag.:-
+the scriplet tag can support the implicit object like out, request, response, session, httpsesssion etc.
+implicit means code can be run the web page inside not a console side.
+for scriplet tag inside if your using the implicit object  is used to the print output of the webpage insde.
+1) Scriptlet Tag:- scriptlet tag can we can write the partial java code.which make development is easier.
+<%---%> this is the scriplet tag sign.
+
+what not allowed inside the scriptlet tag:-
+scriptlet tag inside not allowed the access specifier.
+scriptlet tag inside not allowed the variable declaration not allowed.
+scriptlet tag inside not allowed the method creation is not allowed.
+scriptlet tag inside html code is not allowed.
+ 
+2)Declraation tag:-
+this is the declaration tag sign <%!------ %>
+
+Declraation tag inside allowed the access modifier.
+declaration tag inside allowed the veriable declaration.
+declaration tag inside allowed the method creation.
+but declaration tag inside not allowed the implicit object can not be allowed.
+declaration tag inside not allowed the pritln statment. and not allowed the HTML code. inside the declaration tag.
+
+3)Expresion tag:-
+expresion tag is used to the <%= %> this tag.
+
+can not be allowed the expresion tag inside the more than one statment.
+it can not be allowed the semocolon inside the Expresion tag.
+
+4) Directive Tag:- 
+<%@%>this is the sign of the directive tag
+directive tag is import the package
+
+
+Q)How to read the form data ?
+using the getparameter.
+
+
+
+Q) differenc between the doget && dopost method in java
+1) DOGET:-
+1)it is used to read data from backend.
+2)Data is expose in url
+3) when we refresh page we donot get security alert popup.
+
+2)DOPOST:-
+1) should be used to submit the data to backend.
+2)data is not exposed in url.
+3) when we refresh page we get security alert popup & to avoid duplicate transaction.
+
+
+Differenc between the Application server && WebServer.
+1) Application server use the build the Dynamic application. && Webserver can be build the static application.
+2)Application server can be used technology like jsp, servlet, spring boot, hibernate etc. && webserver ccan be used the technology like HTML , CSS,etc.
+
+
+----------------------+++++++++++++++++++++++-----------------------------
+1)all your maven dependecy which folder inside download.
+all maven dependecy are download in c:users/asus/m2. folder inside all the dependecy are downloaded.
+
+what is the used of the SPRING IOC:-
+1) Spring IOC maintains in bean life cycle
+2)it perform dependecy injection(inversion of control)
+
+--------------------------++++++++++++++++-----------
+difference between authentication && authorization.
+
+what is the authentication ? 
+authentication is verifing are you a valid user or not.
+
+what is the authorization ?
+what feature you can access  and you can not access in your project is called the autorization.
+
+---------------++++++++++++++++++++++-----------------------
+what is the differnce between the Iterator or Iterable
+
+1)iterator:-
+1)it is related to collections
+2) we can use to retrieve the element of collection one by one.
+3)present in java.util package.
+4)it has 3 method used.
+1)hashNext()kk
+2)next()
+3)remove()
+
+2)Iterable:-
+1) it is related to foreach loop.
+2) The target element in for-each loop should be iterable.
+3) present in java.lang package.
+4)iterator method can be used only
+
+---------------------------+++++++++++++++++-------------------------
+JSTL TAG
+ what is the JSTL TAG(jsp standard tag library.)
+ => JSTL TAG INSIDE WE CAN WRITE THE HTML CODE AND its used jstl tag  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+ using this tag you can write the html code inside this tag is JSTL TAG.
+ 
+ for examples print the value using the jstl tag
+ <c:out value="100"></c:out>
+ 
+ 2 example=> using the jstl tag inside performing the intialize the value in var and declear the variable
+ <c:set var="x" value="akshay"/>
+ 
+ 3) Example:- using this if condition using inside the jstl tag
+ <c:set var="salary" value=${4000*2}/>
+ <c:if test="${salary > 2000}">
+<p> you salary is:<c:out value="${salary}"/></p>
+ </c:if>
+ 
+ 4)using the ForEach loop
+<c:forEach var="i" start="1" end="5">
+item<c:out value="${i}"/>
+</c:forEach> 
+--------------------------+++++++++++++++++++++++----------
+Model & ModelMap is similar
+modelmap is help us to find the or controller data with the frontend.
+
+what is the used of the @ModelAttributes in java.
+=>it  bind the form data with the entity class.
+ 
+---------------+++++++++++++++++------------
+Monolthic Application ;-
+it is typically developed as a single codebase, where all the components and functionalities are tightly coupled together.in a monolithic architechture , the application is deployed as a whole on single server.
+
+defination:-Developer are write the code in one server this place is called the monolithic.
+
+Disadvantages Monolitic application:-Diffcult to maintain when codebase increases.
+
+
+Micorservices:- on the other hand, are an architechture style where an application is divided into samller, loosely coupled, and independently deployable services. each service focuses on a specific business capability and communicatiion with other services through well-define APIS.
+
+Defination:- developer code write the different server is called the Microservices.
+ ------------------------++++++++++++++++++++-----------
+ 
+ API :- IS help us to build an application. using microservices application.
+ API help us to integrate  Homogeneous and Hitrogeneous Application.
+ 
+ Homogeneous :- Two application are developed in same language(java) this is called the homogeneous application.like ALL the 
+ 
+ code developed using the java)
+ 
+Hetrogeneous :-Two application are developed in different langauges is called the Hetogenous applications.
+for example server1 using java and second server2 used the .php 
+
+Types of Webservices:-
+1)soap UI :- here we exchange the data between the application using the xml file. it is complex to implements using the xml
+2)Rest API :- here we exchange the data between the application using json file used.
+
+@RestController:- this an API layer.
+
+-----------------------++++++++++++++++---------------++++++++++++++++-------------------------
+@GetMapping Annotation :-used of this Annotation get the data from the java code convert to the json file.using this anotation.
+
+@RequestBody Annotation:- @RequestBody Annotation copy data json object to java object. 
+
+
+----------------------+++++++++++++---------------------
+
+Difference between the overloading and overriding.
+Overloading is the ability to define multiple methods with the same name but different parameter lists within the same class.
+2)using the same class inside create method
+3) using the different parrameters
+ ----------------------------------------+++++++++++++++++++++++++-----------------------------------------------------
+ Technical flow of your project:-
+ OR
+ mvc architecture
+ 
+from postman i am giving json object to rest controller, rest controller copy's the data from json to dto. & then dto restcontroller gives it  to the service layer, service layer  takes the containt of the dto to entity. onces we have an entity service layer makes chooese of repository. rerository save method applied on entity we save the data into database.
+ .
+
+json object       DTO                     entity                                save the data
+postman--------restcontroller--------servicelayer-----------repository----------database
+
+
+-----------------------+++++++++++++++++++++++++++++++++++++++++++++++-------------******-----------------
+@Data Annotation:-get the automatic getter and setter method.
+@NoArgsConstructor & @AllArgsConstructor:- this will be automaticaly add constructors as will in your code
+@NoArgsConstructor :- is used to the default constructors
+@AllArgsConstructor:- constructor with arguments using this annotation.
+
+
+which annotaion used the lombok library.
+@Data Annotation
+@NoArgsConstructor
+@AllArgsConstructor
+
+----------------------------------++++++++++++++++----------
+MVC Architecture
+from postman the data will go to Dto from Dto then data go to the service. service will convert the DTO to entity and save the object.
+
+------------------------------++++++++++++++++++++--------------
+What is the ResponseEntity:-ResponseEntity will return the response entity type. ResponseEntity will return the response back to postman.
+
+
+What is the filter:- suppose 100 records but i want akshay name candidate so that time i am using the filter commands.
+
+collectors:- 
+Collectors class helps with stream data aggregation in Java.
+
+--------------------------+++++++++++++++++++++++-------------------------
+what is the Diffrence between the crud Reposiotry & JPA Reposiotry.
+
+crud Reposiotry:-crud Reposiotry can only perform the crud operation only.crud repository inside pagination not suppot.
+2) curd find all return iterable
+
+JPA Reposiotry:- can do Crude operation or pagination support.
+2)JPA return type is list of entities.
+---------------------------------------+++++++++++---------
+How to converet the string to sortBy Object:- sort.by();
+
+--------------------------+++++++++++++++++-------------
+Mobile No validation in spring
+
+using the below annotation used their
+ @Size(min =10,max=10, message ="invalid mobile number")
+ private String mobile;
+ 
+ --------------------------------+++++++++++++-----------
+ what is the used of the @modelMapper Annotation. :-This liberies simply copy the data from java to DTO & DTO to entity.
+1)provide the mapper libelaries.
+2)ModelMapper simplifies copying data between Java objects automatically.
+
+-----------------------+++++++++++++++++++--------------
+@What is the @SpringBootApplication Annotations:-
+it is starting point from where your project execution begains.
+
+
+
+what is the cascadeall:- 
+cascadeall means if your make changes in one entity that will be reflect to the another entity.
+
+
+where is the Configuration class:_
+the default class where the project start @SpringBootApplication that called the configuration file.
+
+
+----------------****************-------------------
+Info Vision Lab Question interview asking me.
+
+how many ways to create the object in java.
+1)Using the new keyword: 
+
+MyClass object = new MyClass();
+
+2)Using static factory methods or Instance :-
+
+MyClass object = MyClass.createInstance();
+
+3)Using object cloning:
+
+MyClass originalObject = new MyClass();
+MyClass clonedObject = originalObject.clone();
+
+4)Using reflection:
+MyClass object = (MyClass) Class.forName("MyClass").newInstance();
+
+5)Using deserialization:
+
+// Assuming `objectBytes` is a byte array containing the serialized object
+ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(objectBytes));
+MyClass object = (MyClass) in.readObject();
+
+
+what is the main purpose of abstract class in java.?
+
+The main purpose of an abstract class in Java is to provide a common template or structure for its subclasses, promoting code reusability and ensuring consistent behavior among related classes.
+
+The purpose of an abstract class is to provide a common definition of a base class that multiple derived classes can share
+
+if we are declared the abstract method so it is mandatory to child class inside implementation is mandatory.  
+
+What is the purpose of @Override keyword, because if I omit it, it still works the same.
+=> It improves the code's readability
+
+@ControllerAdvice:-
+when we used to handle exception in your spring boot project.
+
+------------------------++++++++++++++++++++++++++----------------------
+How to handle the Exception in Spring boot Project.
+using the 
+@ControllerAdvice
+@ExceptionHandler
+
+__---------------------------+++_--------------------
+
+
+what is the wrapper class in java.
+main purpose:-
+wrapper class in java is used to convert primitive into ob	ject and vice -versa.
+
+there are two types of Wrapper class in java.
+1)Autoboxing:- convert to the primitive to object(wrapper).
+2)UnBoxing:- convert object(wrapper) to primitive data type.
+
+
+---------------******************-----------------
+what is the main Pupose of Arraylist in java.
+
+The main purpose of an ArrayList in Java is to provide a dynamic array implementation, enabling flexible storage and manipulation of data.
+
+what is the main pupose of linklist in java.
+The main purpose of a LinkedList in Java is efficient insertion, deletion, and dynamic memory allocation for flexible data structures.
+
+What is the difference between ArrayList and LinkedList in Java. 
+
+LinkedList provides better performance than ArrayList for adding and removing elements at the beginning or middle of the list.q]
+
+
+what is the main purpose of immutable string or class in java 
+
+The main purpose of immutable strings or classes in Java is to ensure data integrity, thread safety, and simplify concurrency control.
+
+
+What is the purpose of the break statement in Java?
+
+=> To end the current iteration of a loop and resume execution at the next statement after the loop.
+
+
+Certainly! Here's another Java objective question:
+
+Question:
+What does the instanceof operator in Java do?
+=> Checks if an object is an instance of a particular class or its subclass.
+
+What is the difference between the == operator and the .equals() method in Java?
+=>  The == operator compares the references of objects, while .equals() compares their content.
+
+What is the purpose of the static keyword in Java?
+=> To specify that a method can be accessed without creating an instance of the class.
+
+Which of the following statements about Java interfaces is true?
+=>B) Interfaces can provide method implementations.
+
+
+---------------------------------------------------------------------------
+
+the Parent Dependecy :-
+# Spring-Context is added as a direct dependecy in your project.
+when you add this dependecy, maven automatically resolves its transitive dependecies like spring-core,
+spring-beans, spring-aop, spring-expression, spring-jcl.
+
+
+
+
+
+
+
+
+
+			
+		
+
+		
+
+
+
+

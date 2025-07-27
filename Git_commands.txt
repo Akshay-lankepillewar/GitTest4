@@ -1,0 +1,81 @@
+Basic Git Commands
+1) git --version // check the version git.
+2)git status check the which file add where if your change so all the small changes can be show this command
+3)ls // this command showing the project inside  or if your select the path then path inside all file list can show.
+4)clear clear command is clear the terminal.
+5)git clone // this command is used to the clone the code using the git clone and url github project.
+5)cd // new directory. 
+  cd ..// menas folder cha baher yete
+6)git add // this command used  adds new or changed files in your working directory to the Git staging area.
+
+tag :- git add <-file name->
+
+7)git add .// this dot is used to the suppose no of file add in your project so that time if your used this command.
+
+8) commit :- it is the record of change.
+command:-
+  git commit -m "some message";
+  
+9) Push Command:- upload local repo content to remote repo.
+ git command :- git push origin main.
+use 
+                    push
+		Remote <------------ Local
+
+10)Init Command:- used  to create a new git repo.
+
+git init
+git remote add origin<-link->  :- means i am add one remote(local repository) add in the set the origin.
+git remote -v (to verity remote):- which origin set then used this command.
+git branch (to check branch):-
+git branch -M main (to rename branch)
+git push origin main.
+
+What does Git do?
+Manage projects with Repositories
+Clone a project to work on a local copy
+Control and track changes with Staging and Committing
+Branch and Merge to allow for work on different parts and versions of a project
+Pull the latest version of the project to a local copy
+Push local updates to the main project
+
+-------------------------------++++++++++++++++++++++++++++++++++++++------------------------------------------------------
+steps  creating type repository each and every time used this commands. 
+
+step 1:-
+check the git version using below command.
+git --version
+
+step 2:-
+config git menas set the user repository name or gmail using the below commands.
+git config --global user.name "your repository name"
+git config --global user.email "your email when if your added in your git inside"
+
+step 3:-
+Now, let's create a new folder for our project:
+then used the below commands
+mkdir myproject(your folder name)
+cd myproject (this is the path add then if your create another file inisde my project so that the path is used ).
+
+mkdir makes a new directory.
+cd changes the current working directory.
+
+Initialize Git
+Once you have navigated to the correct folder, you can initialize Git on that folder:
+
+command:- git init
+ 
+Initialized empty Git repository in /Users/user/myproject/.git/
+----------------------------------------------------------------------------------------
+
+psa git.
+
+:-source code management tool
+#integrate developer code	
+#work history 
+
+
+
+
+
+		
