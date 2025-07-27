@@ -1,11 +1,16 @@
 Basic Git Commands
 1) git --version // check the version git.
+
 2)git status check the which file add where if your change so all the small changes can be show this command
+
 3)ls // this command showing the project inside  or if your select the path then path inside all file list can show.
-4)clear clear command is clear the terminal.
+
+4)clear command is clear the terminal.
+
 5)git clone // this command is used to the clone the code using the git clone and url github project.
 5)cd // new directory. 
-  cd ..// menas folder cha baher yete
+  cd ..// means folder leave the folder.
+  
 6)git add // this command used  adds new or changed files in your working directory to the Git staging area.
 
 tag :- git add <-file name->
